@@ -3,6 +3,8 @@ body {
      font-weight: 650;
      background-image: url(images/bg.png);
      background-repeat: no-repeat;
+     background-size: cover;
+}
 }
 header h1 {
     text-align: center;
