@@ -3,6 +3,7 @@ body {
      font-weight: 650;
      background-image: url(images/bg.png);
      background-repeat: no-repeat;
+     background-size: contain;
      background-size: cover;
 }
 }
