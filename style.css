@@ -4,7 +4,6 @@ body {
      background-image: url(images/bg.png);
      background-repeat: no-repeat;
      background-size: contain;
-     background-size: cover;
 }
 }
 header h1 {
