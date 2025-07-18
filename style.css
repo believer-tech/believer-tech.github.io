@@ -1,0 +1,98 @@
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 650;
+     background-color: grey;
+}
+header h1 {
+    text-align: center;
+    
+}
+nav {
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+    border-radius: 5px;
+}
+nav a {
+     padding-left: 10px;
+     padding-right: 10px;
+     color: rgba(0, 0, 0, 0.897);
+     text-decoration: none;
+     padding-bottom: 1px;
+}
+nav a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-left: 5px;
+    padding: none;
+}
+section {
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 5px;
+}
+
+#about {
+    background-color: white;
+    transition: 1s;    
+}
+#about:hover {
+    transform: translateY(10px)
+}
+#about:hover {
+    color: white;
+    background-color: black;
+}
+
+#contact {
+    background-color: white;
+    transition: 1s;
+}
+#contact:hover {
+    transform: translateY(10px);
+    color: white;
+    background-color: black;
+}
+header h1:hover {
+    color: white;
+    transition: 0.5s;
+    transform: scale(1.5,1.5);
+}
+#services p:hover {
+     color:white;
+    transition: 0.5s;
+    transform: translateY(10px);
+}
+#services a:hover {
+    color: black;
+    transition: 0.5s;
+}
+.Home:hover {
+     color:  white;
+     transition: 0.5s;
+     transform: translateY(10px);
+}
+#contact a {
+    color:gray; 
+    text-decoration: none;
+}
+#services a {
+    color: white;
+    text-decoration: none;
+}
+#services li:hover {
+        transform: translateX(10px);
+        transition: 0.5s;
+}
+#services ul:hover {
+    color: white;
+    transition: 0.5s;
+}
+header {
+    background-color: rgb(73, 72, 72);
+    padding-top: 4px;
+    border-radius: 5px;
+}
