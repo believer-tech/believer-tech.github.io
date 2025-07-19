@@ -5,6 +5,7 @@ body {
      background-repeat: no-repeat;
      background-size: contain;
      background-size: cover;
+     background-position: center;
      font-size: 11px;
 }
 header h1 {
