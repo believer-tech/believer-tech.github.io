@@ -1,15 +1,14 @@
 body {
      font-family: Arial, Helvetica, sans-serif;
      font-weight: 650;
-     background-image: url(images/bg.png);
+    background-image: url(images/bg.png);
      background-repeat: no-repeat;
      background-size: contain;
-     backgrpund-size: cover;
-}
+     background-size: cover;
+     font-size: auto;
 }
 header h1 {
     text-align: center;
-    
 }
 nav {
      display: flex;
@@ -87,6 +86,9 @@ header h1:hover {
     color: white;
     text-decoration: none;
 }
+#services li {
+    padding-bottom: 5px;
+}
 #services li:hover {
         transform: translateX(10px);
         transition: 0.5s;
@@ -99,4 +101,5 @@ header {
     background-color: rgb(73, 72, 72);
     padding-top: 4px;
     border-radius: 5px;
+    padding-bottom: 4px;
 }
