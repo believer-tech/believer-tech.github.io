@@ -10,14 +10,20 @@
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         transition: 0.2s;
+        background-color: rgba(128, 128, 128, 0.493);
+        padding: 8px;
+        border-radius: 10px;
     }
     h1:hover {
         transform: translateX(10px);
     }
     body {
-        background-image: linear-gradient(to right,darkblue,rgb(64, 75, 231),lightblue);
+        background-image: linear-gradient(to right,darkblue,rgb(50, 61, 221),lightblue);
         background-size: 200% 200%;
         animation: gradient 10s ease infinite alternate;
+        justify-items: center;
+        justify-content: center;
+        color: white;
     }
     @keyframes gradient {
         0% {
@@ -27,8 +33,29 @@
             background-position: 100%;
         }
     }
+    a {
+        font-size: 2rem;
+        color: grey;
+        text-decoration: none;
+    }
+    p {
+        font-size: 2rem;
+    }
+a,p:hover {
+    transform: translateX(10px);
+    transition: 0.2s;
+}
+div {
+    background-color: rgba(128, 128, 128, 0.432);
+    padding: 6px;
+    border-radius: 10px;
+}
 </style>
 <body>
     <h1>CONTACT ME OR JOIN MY WHATSAPP CHANNEL</h1>
+    <div>
+    <p>Join my whatsapp <a href="http://www.whatsapp.com">channel</a></p>
+    <p>Contact <a href="http://www.whatsapp.com">me</a></p>
+    </div>
 </body>
 </html>
