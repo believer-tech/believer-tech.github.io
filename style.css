@@ -5,6 +5,7 @@ body {
 background: linear-gradient(90deg,rgb(8, 32, 165) 0%, rgb(51, 5, 124) 35%, rgb(108, 157, 212) 100%);
 animation: gradient 2s linear infinite alternate ;
 background-size: 200% 200% ;
+    height: 100vh;
 }
 h1 {
 background: #020024;
