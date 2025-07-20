@@ -1,106 +1,59 @@
 body {
-     font-family: Arial, Helvetica, sans-serif;
-     font-weight: 650;
-    background-image: url(images/bg.png);
-     background-repeat: no-repeat;
-     background-size: contain;
-     background-size: cover;
-     background-position: center;
-     font-size: 11px;
+    justify-content: center;
+    background: #020024;
+background: linear-gradient(90deg,rgb(8, 32, 165) 0%, rgb(51, 5, 124) 35%, rgb(108, 157, 212) 100%);
+animation: gradient 2s linear infinite alternate ;
+background-size: 200% 200% ;
 }
-header h1 {
-    text-align: center;
+h1 {
+background: #020024;
+background: linear-gradient(90deg,rgb(189, 78, 14) 0%, rgb(36, 206, 36) 35%, rgb(89, 0, 255) 100%);
+background-size: 200% 200%;
+color: transparent;
+animation: gradient 2s ease infinite alternate  ;
+-webkit-background-clip: text;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes gradient {
+    0% {
+        background-position: 50%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+div {
+    background-color: rgba(128, 128, 128, 0.541);
+    justify-items: center;
+    height: 400px;
+    width: inherit;
+    border-radius: 20px;
+}
+p {
+    background-image: linear-gradient(to right,blue,white);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.7s;
+}
+p:hover {
+        transform: translateY(-7px);
 }
 nav {
-     display: flex;
-     justify-content: center;
-     margin-left: auto;
-     margin-right: auto;
-    border-radius: 5px;
-}
-nav a {
-     padding-left: 10px;
-     padding-right: 10px;
-     color: rgba(0, 0, 0, 0.897);
-     text-decoration: none;
-     padding-bottom: 1px;
+    background-color: rgba(128, 128, 128, 0.459);
+    padding: 4px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
 }
 nav a:hover {
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    transition: 0.5s;
+background-color: white;
+border-radius: 6px;
+}
+nav a {
     margin-left: 5px;
-    padding: none;
-}
-section {
-        margin-top: 10px;
-        border-radius: 5px;
-        padding: 5px;
-}
-
-#about {
-    background-color: white;
-    transition: 1s;    
-}
-#about:hover {
-    transform: translateY(10px)
-}
-#about:hover {
-    color: white;
-    background-color: black;
-}
-
-#contact {
-    background-color: white;
-    transition: 1s;
-}
-#contact:hover {
-    transform: translateY(10px);
-    color: white;
-    background-color: black;
-}
-header h1:hover {
-    color: white;
-    transition: 0.5s;
-    transform: scale(1.5,1.5);
-}
-#services p:hover {
-     color:white;
-    transition: 0.5s;
-    transform: translateY(10px);
-}
-#services a:hover {
-    color: black;
-    transition: 0.5s;
-}
-.Home:hover {
-     color:  white;
-     transition: 0.5s;
-     transform: translateY(10px);
-}
-#contact a {
-    color:gray; 
     text-decoration: none;
-}
-#services a {
-    color: white;
-    text-decoration: none;
-}
-#services li {
-    padding-bottom: 5px;
-}
-#services li:hover {
-        transform: translateX(10px);
-        transition: 0.5s;
-}
-#services ul:hover {
-    color: white;
+    padding: 3px;
     transition: 0.5s;
-}
-header {
-    background-color: rgb(73, 72, 72);
-    padding-top: 4px;
-    border-radius: 5px;
-    padding-bottom: 4px;
 }
