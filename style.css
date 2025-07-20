@@ -1,4 +1,5 @@
 body {
+    justify-items: center;
     justify-content: center;
     background: #020024;
 background: linear-gradient(90deg,rgb(8, 32, 165) 0%, rgb(51, 5, 124) 35%, rgb(108, 157, 212) 100%);
@@ -13,6 +14,10 @@ color: transparent;
 animation: gradient 2s ease infinite alternate  ;
 -webkit-background-clip: text;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+transition: 0.5s;
+}
+h1:hover {
+    transform: translateY(10px);
 }
 @keyframes gradient {
     0% {
@@ -28,6 +33,7 @@ div {
     height: 400px;
     width: inherit;
     border-radius: 20px;
+    padding: 8px;
 }
 p {
     background-image: linear-gradient(to right,blue,white);
@@ -56,4 +62,14 @@ nav a {
     text-decoration: none;
     padding: 3px;
     transition: 0.5s;
+}
+ul {
+    background-image: linear-gradient(to right,blue,white);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.7s;
+}
+ul:hover {
+    transform: translateY(-7px);
 }
