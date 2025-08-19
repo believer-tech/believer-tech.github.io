@@ -1,83 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BELIEVER TECH</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!DOCTYPE html>  <html lang="en">    <head>    
+  <meta charset="UTF-8">    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>BELIEVER-TECH</title>    
+  <style>    
+    /* General Reset */    
+    * { margin: 0; padding: 0; box-sizing: border-box; }    
+    body {    
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+      color: #e0e0e0;    
+      overflow-x: hidden;    
+      position: relative;    
+      min-height: 100vh;    
+    }  /* Motion Background */    
+#bg-canvas {    
+  position: fixed;    
+  top: 0;    
+  left: 0;    
+  width: 100%;    
+  height: 100%;    
+  z-index: -1;    
+  background: #0a192f;    
+}    header {
+text-align: center;
+padding: 50px 20px;
+background: rgba(10, 25, 47, 0.6);
+box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+header h1 {
+font-size: 2.8rem;
+color: #00f7ff;
+text-shadow: 0 0 20px #00f7ff;
+animation: glow 2s infinite alternate;
+}
+header p {
+font-size: 1.2rem;
+margin-top: 10px;
+color: #90e0ef;
+}
+@keyframes glow {
+from { text-shadow: 0 0 10px #00f7ff; }
+to { text-shadow: 0 0 25px #00f7ff, 0 0 40px #00f7ff; }
+}
 
-  <!-- Motion Background -->
-  <canvas id="bgCanvas"></canvas>
+nav {
+display: flex;
+justify-content: center;
+background: rgba(27, 38, 59, 0.8);
+box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
+}
+nav button {
+padding: 15px 25px;
+background: transparent;
+border: none;
+color: #e0e0e0;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+nav button:hover {
+color: #00f7ff;
+text-shadow: 0 0 10px #00f7ff;
+}
 
-  <header>
-    <h1>BELIEVER TECH</h1>
-    <p>Your Trusted Tech Partner</p>
-  </header>
+section {
+display: none;
+padding: 40px 20px;
+animation: fadeIn 0.8s ease-in-out;
+}
+section.active { display: block; }
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
 
-  <nav>
-    <button onclick="openTab('home')">Home</button>
-    <button onclick="openTab('faq')">FAQ</button>
-    <button onclick="openTab('contact')">Contact</button>
-  </nav>
+/* FAQ */
+.faq-item {
+margin-bottom: 15px;
+border: 1px solid #00f7ff;
+border-radius: 8px;
+overflow: hidden;
+}
+.faq-question {
+background: #1b263b;
+padding: 15px;
+color: #00f7ff;
+cursor: pointer;
+text-align: left;
+border: none;
+font-size: 16px;
+transition: background 0.3s;
+}
+.faq-question:hover { background: #0d1b2a; }
+.faq-answer {
+display: none;
+background: #0a192f;
+padding: 15px;
+color: #e0e0e0;
+border-top: 1px solid #00f7ff;
+}
 
-  <!-- HOME TAB -->
-  <section id="home" class="active">
-    <h2>About Us</h2>
-    <p>BELIEVER TECH is a leading tech company offering innovative solutions for businesses and individuals. 
-       We believe in technology that makes life easier.</p>
-  </section>
+/* Contact Form */
+form {
+max-width: 600px;
+margin: auto;
+background: rgba(27, 38, 59, 0.9);
+padding: 25px;
+border-radius: 12px;
+box-shadow: 0 0 25px rgba(0, 247, 255, 0.2);
+transition: transform 0.3s ease;
+}
+form:hover { transform: scale(1.02); }
+form input, form textarea {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border-radius: 6px;
+border: none;
+outline: none;
+background: #0a192f;
+color: #e0e0e0;
+border: 1px solid #00f7ff;
+}
+form button {
+width: 100%;
+padding: 15px;
+border: none;
+border-radius: 8px;
+background: #00f7ff;
+color: #0a192f;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.3s;
+}
+form button:hover { background: #90e0ef; }
 
-  <!-- FAQ TAB -->
-  <section id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <button class="faq-question">What services do you provide?</button>
-      <div class="faq-answer">We provide web development, mobile app development, IT consulting, and more.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">How can I get a quote?</button>
-      <div class="faq-answer">Simply use the contact form on our website or call us at +2348023483012.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Where are you located?</button>
-      <div class="faq-answer">We are based in Nigeria but serve clients worldwide.</div>
-    </div>
-  </section>
+/* WhatsApp */
+.whatsapp-btn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+padding: 15px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+transition: transform 0.3s;
+}
+.whatsapp-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 0 30px rgba(37, 211, 102, 0.7);
+}
 
-  <!-- CONTACT TAB -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have more questions? Reach out to us anytime!</p>
-
-    <form action="https://formspree.io/f/mnnzkabw" method="POST">
-      <label>Name:</label>
-      <input type="text" name="name" required>
-
-      <label>Email:</label>
-      <input type="email" name="_replyto" required>
-
-      <label>Message:</label>
-      <textarea name="message" required></textarea>
-
-      <input type="hidden" name="_subject" value="New message from BELIEVER TECH Website">
-      <input type="hidden" name="_autoresponse" value="Hello! 👋 
-Thanks for reaching out to BELIEVER TECH. 
-We have received your message and will respond shortly. 
-If it's urgent, call us at +2348023483012. 
-- BELIEVER TECH Team">
-
-      <button type="submit">Send Message</button>
-    </form>
-
-    <p style="margin-top:20px;">📞 Call us directly: <b>+2348023483012</b></p>
-  </section>
-
-  <!-- WhatsApp Direct Chat -->
-  <a href="https://wa.me/2348023483012" class="whatsapp-btn" target="_blank">💬 Chat on WhatsApp</a>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+  </style>    
+</head>    
+<body>    <!-- Motion Background -->  <canvas id="bg-canvas"></canvas>    <header>    
+    <h1>BELIEVER-TECH</h1>    
+    <p>Innovating the Future with Technology</p>    
+  </header>    <nav>    
+    <button onclick="openTab('home')">Home</button>    
+    <button onclick="openTab('faq')">FAQ</button>    
+    <button onclick="openTab('contact')">Contact</button>    
+  </nav>    <section id="home" class="active">    
+    <h2>About Us</h2>    
+    <p>BELIEVER-TECH is a modern tech company offering web development, mobile apps, and IT consulting with futuristic solutions tailored for your business growth.</p>    
+  </section>    <section id="faq">    
+    <h2>Frequently Asked Questions</h2>    
+    <div class="faq-item">    
+      <button class="faq-question">🚀 What services do you offer?</button>    
+      <div class="faq-answer">We provide web development, mobile app creation, IT consulting, and custom tech solutions.</div>    
+    </div>    
+    <div class="faq-item">    
+      <button class="faq-question">💡 How can I request a quote?</button>    
+      <div class="faq-answer">You can contact us using the form or directly via WhatsApp at +2348023483012.</div>    
+    </div>    
+    <div class="faq-item">    
+      <button class="faq-question">🌍 Do you work internationally?</button>    
+      <div class="faq-answer">Yes! We serve clients worldwide with top-tier tech solutions.</div>    
+    </div>    
+  </section>    <section id="contact">    
+    <h2>Contact Us</h2>    
+    <form action="https://formspree.io/f/mnnzkabw" method="POST">    
+      <input type="text" name="name" placeholder="Your Name" required>    
+      <input type="email" name="_replyto" placeholder="Your Email" required>    
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>    
+      <input type="hidden" name="_subject" value="New message from BELIEVER-TECH Website">    
+      <input type="hidden" name="_autoresponse" value="Hello! 👋 Thanks for reaching out to BELIEVER-TECH. We’ll respond soon. For urgent matters, call +2348023483012.">    
+      <button type="submit">Send Message</button>    
+    </form>    
+    <p style="margin-top:20px; text-align:center;">📞 Call us: <b>+2348023483012</b></p>    
+  </section>  <a href="https://wa.me/2348023483012" class="whatsapp-btn" target="_blank">💬 Chat on WhatsApp</a>    <script>    
+    function openTab(tabId) {    
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));    
+      document.getElementById(tabId).classList.add("active");    
+    }    
+    
+    document.querySelectorAll(".faq-question").forEach(btn => {    
+      btn.addEventListener("click", () => {    
+        let answer = btn.nextElementSibling;    
+        answer.style.display = answer.style.display === "block" ? "none" : "block";    
+      });    
+    });    
+    
+    // Motion background (floating particles)    
+    const canvas = document.getElementById("bg-canvas");    
+    const ctx = canvas.getContext("2d");    
+    let particles = [];    
+    
+    function resizeCanvas() {    
+      canvas.width = window.innerWidth;    
+      canvas.height = window.innerHeight;    
+    }    
+    window.addEventListener("resize", resizeCanvas);    
+    resizeCanvas();    
+    
+    class Particle {    
+      constructor() {    
+        this.x = Math.random() * canvas.width;    
+        this.y = Math.random() * canvas.height;    
+        this.radius = Math.random() * 3 + 1;    
+        this.dx = (Math.random() - 0.5) * 1.5;    
+        this.dy = (Math.random() - 0.5) * 1.5;    
+      }    
+      draw() {    
+        ctx.beginPath();    
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);    
+        ctx.fillStyle = "rgba(0, 247, 255, 0.8)";    
+        ctx.fill();    
+      }    
+      update() {    
+        this.x += this.dx;    
+        this.y += this.dy;    
+        if (this.x < 0 || this.x > canvas.width) this.dx *= -1;    
+        if (this.y < 0 || this.y > canvas.height) this.dy *= -1;    
+        this.draw();    
+      }    
+    }    
+    
+    function init() {    
+      particles = [];    
+      for (let i = 0; i < 80; i++) {    
+        particles.push(new Particle());    
+      }    
+    }    
+    
+    function animate() {    
+      requestAnimationFrame(animate);    
+      ctx.clearRect(0, 0, canvas.width, canvas.height);    
+      particles.forEach(p => p.update());    
+    }    
+    
+    init();    
+    animate();    
+  </script>  </body>    </html>
