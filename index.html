@@ -1,33 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BELIEVER-TECH</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4766513372020463"
-     crossorigin="anonymous"></script>
-    <script src="https://fpyf8.com/88/tag.min.js" data-zone="162511" async data-cfasync="false"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BELIEVER TECH</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-    <h1 title="WELCOME">BELIEVER-TECH</h1>
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="contact.html" target="_blank" title="MY GROUP OR DM ME" >CONTACT</a>
-        <a href="files.html" target="_blank" title="GET ALL NEEDED FILES">FILES-LINKS</a>
-    </nav>
-    <p>welcome to the believer tech website where we give you the best tips and tricks to get you to the top of your tech game <br>
-    </p>
-    <p>What's new:
-        <ul>
-            <li>MINECRAFT UPDATES</li>
-            <li>WEB UPDATES</li>
-            <li>APP TOOLKITS</li>
-        </ul>
-    </p>
+
+  <!-- Motion Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <header>
+    <h1>BELIEVER TECH</h1>
+    <p>Your Trusted Tech Partner</p>
+  </header>
+
+  <nav>
+    <button onclick="openTab('home')">Home</button>
+    <button onclick="openTab('faq')">FAQ</button>
+    <button onclick="openTab('contact')">Contact</button>
+  </nav>
+
+  <!-- HOME TAB -->
+  <section id="home" class="active">
+    <h2>About Us</h2>
+    <p>BELIEVER TECH is a leading tech company offering innovative solutions for businesses and individuals. 
+       We believe in technology that makes life easier.</p>
+  </section>
+
+  <!-- FAQ TAB -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">What services do you provide?</button>
+      <div class="faq-answer">We provide web development, mobile app development, IT consulting, and more.</div>
     </div>
+    <div class="faq-item">
+      <button class="faq-question">How can I get a quote?</button>
+      <div class="faq-answer">Simply use the contact form on our website or call us at +2348023483012.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Where are you located?</button>
+      <div class="faq-answer">We are based in Nigeria but serve clients worldwide.</div>
+    </div>
+  </section>
+
+  <!-- CONTACT TAB -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have more questions? Reach out to us anytime!</p>
+
+    <form action="https://formspree.io/f/mjkbynqq" method="POST">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="_replyto" required>
+
+      <label>Message:</label>
+      <textarea name="message" required></textarea>
+
+      <input type="hidden" name="_subject" value="New message from BELIEVER TECH Website">
+      <input type="hidden" name="_autoresponse" value="Hello! 👋 
+Thanks for reaching out to BELIEVER TECH. 
+We have received your message and will respond shortly. 
+If it's urgent, call us at +2348023483012. 
+- BELIEVER TECH Team">
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:20px;">📞 Call us directly: <b>+2348023483012</b></p>
+  </section>
+
+  <!-- WhatsApp Direct Chat -->
+  <a href="https://wa.me/2348023483012" class="whatsapp-btn" target="_blank">💬 Chat on WhatsApp</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
